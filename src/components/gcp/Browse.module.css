@@ -1,0 +1,53 @@
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tabBtn {
+  padding: 8px 18px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+  margin-bottom: -1px;
+}
+.tabBtn:hover  { color: var(--text); }
+.tabActive     { color: var(--bright); border-bottom-color: #3b82f6; }
+
+.searchMeta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.searchMeta strong { color: var(--bright); }
+
+.searchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.searchCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--c);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.searchCard:hover { border-color: var(--c); background: var(--surface2); }
+
+.sFam  { font-family: var(--font-mono); font-size: 10px; color: var(--c); }
+.sName { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--bright); }
+.sTldr { font-size: 11px; color: var(--muted); line-height: 1.4; }

@@ -1,0 +1,42 @@
+.sidebar {
+  width: 192px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  padding: 14px 0;
+  overflow-y: auto;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  padding: 0 14px 8px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  border-left: 2px solid transparent;
+  transition: all 0.18s;
+  text-align: left;
+}
+.btn:hover         { color: var(--text); background: rgba(255,255,255,0.02); }
+.btn.active        { color: var(--bright); border-left-color: var(--c); background: rgba(255,255,255,0.03); }
+.btn.active .icon  { color: var(--c); }
+.btn.active .name  { color: var(--bright); }
+
+.icon  { font-size: 13px; width: 16px; text-align: center; color: var(--muted); }
+.name  { flex: 1; }
+.count { font-family: var(--font-mono); font-size: 10px; opacity: 0.4; }
+
+.stat  { font-size: 11px; color: var(--muted); padding: 2px 14px; font-family: var(--font-mono); }

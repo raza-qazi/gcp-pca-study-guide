@@ -1,0 +1,115 @@
+.shell {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: stretch;
+  height: 52px;
+  background: rgba(7, 11, 18, 0.98);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  padding: 0 20px;
+  gap: 0;
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 20px;
+  border-right: 1px solid var(--border);
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+.brandIcon {
+  font-size: 16px;
+  background: linear-gradient(135deg, #34A853, #326CE5, #A855F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.brandName {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--bright);
+  white-space: nowrap;
+}
+.brandYear {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 2px 6px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+}
+
+/* ── App switcher ── */
+.switcher {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  padding: 0 8px;
+}
+
+.appTab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  border-radius: 0;
+  position: relative;
+}
+.appTab:hover { background: rgba(255,255,255,0.02); }
+.appTabActive {
+  border-bottom-color: var(--c) !important;
+  background: color-mix(in srgb, var(--c) 5%, transparent) !important;
+}
+
+.tabIcon {
+  font-size: 16px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.appTabActive .tabIcon { opacity: 1; color: var(--c); }
+
+.tabLabel {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.appTabActive .tabLabel { color: var(--bright); }
+
+.tabSub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  opacity: 0.8;
+  white-space: nowrap;
+}
+.appTabActive .tabSub { color: var(--c); opacity: 0.8; }
+
+/* ── Right side ── */
+.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.activePill {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--c);
+  background: color-mix(in srgb, var(--c) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c) 20%, transparent);
+  padding: 3px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
